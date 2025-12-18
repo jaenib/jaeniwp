@@ -2,14 +2,15 @@ Design decisions for jaenib.com/cv
 
 Palette
 - Red-orange accent: #d84a2b
-- Dark aubergine text: #2a0f31
-- Grey-violet muted: #6f6277
-- Background: #f6f2f4, panel: #fdfbfc, line: #e1d9e3
+- Dark aubergine: #2a0f31
+- Grey-violet: #6f6277
+- Dark base: background #0b0a0f, panel #14111a, line #2b2433
 
 Form and layout
+- Dark mode as default; use red-orange and muted violet glows sparingly to avoid heavy neon.
 - All UI boxes are sharp-edged (no rounded corners) across panels, cards, chips, buttons, and nav.
 - Sticky left rail with nav anchors; main content in stacked panels.
-- Subtle radial background haze using the palette (no heavy gradients).
+- Subtle background grid and layered haze for a slight cyberpunk nudge without going full sci-fi.
 
 Typography
 - Space Grotesk for headings, General Sans for body.
@@ -21,6 +22,6 @@ Content policy
 - Keep the PDF download sanitized and aligned with on-page content.
 
 Future instructions
-- Keep the accent switcher limited to the approved palette colors.
+- Do not add an accent switcher; the palette should be featured in the layout itself.
 - If new sections are added, keep the visual rhythm: short header + dense content blocks.
 - Avoid overly rounded shapes or pastel schemes; keep the tone precise and architectural.
