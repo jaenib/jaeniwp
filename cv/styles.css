@@ -73,6 +73,17 @@ a {
   text-decoration: none;
 }
 
+.inline-link {
+  color: color-mix(in srgb, var(--accent) 75%, #fff 25%);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  padding-bottom: 1px;
+}
+
+.inline-link:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
 img {
   max-width: 100%;
   display: block;
@@ -328,6 +339,14 @@ img {
   border-color: color-mix(in srgb, var(--accent-dark) 55%, transparent);
 }
 
+.portfolio-card:nth-child(4) {
+  border-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.portfolio-card:nth-child(5) {
+  border-color: color-mix(in srgb, var(--accent-muted) 55%, transparent);
+}
+
 .portfolio-top {
   display: flex;
   justify-content: space-between;
@@ -387,6 +406,17 @@ img {
   object-fit: cover;
 }
 
+.case-gallery video {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #050408;
+}
+
+.case-video {
+  background: #050408;
+}
+
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -405,6 +435,28 @@ img {
 }
 
 .works-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.links-card {
+  border: 1px solid var(--line);
+  padding: 16px;
+  background: color-mix(in srgb, var(--accent-muted) 20%, transparent);
+}
+
+.links-card h3 {
+  margin: 0 0 10px;
+}
+
+.links-card ul {
   margin: 0;
   padding-left: 18px;
 }
@@ -525,6 +577,10 @@ img {
   }
 
   .case-gallery img {
+    height: 180px;
+  }
+
+  .case-gallery video {
     height: 180px;
   }
 }

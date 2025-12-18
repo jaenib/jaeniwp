@@ -13,6 +13,8 @@ Form and layout
 - Subtle background grid and layered haze for a slight cyberpunk nudge without going full sci-fi.
 - Portfolio structure: short "Selected Works" panel + a single deep case study + tooling summary.
 - Current hierarchy: Portfolio overview (downloads) + three deep case studies (Familiar Stranger, Binz/B2Morrow, Sensing Abundance) + compact index of remaining works.
+- New subpages: Dream Together and Invisibility live under `cv/projects/` with the same visual system.
+- Links section collects official destinations for collaborations, socials, and media channels.
 
 Typography
 - Space Grotesk for headings, General Sans for body.
@@ -23,6 +25,7 @@ Content policy
 - Use jan.ba.jb@gmail.com as the public contact email until changed.
 - Keep the PDF download sanitized and aligned with on-page content.
 - Portfolio media lives in `cv/assets` and should be optimized for web display.
+- Embed only short, optimized video clips (mp4, muted by default, small size).
 
 Future instructions
 - Do not add an accent switcher; the palette should be featured in the layout itself.
