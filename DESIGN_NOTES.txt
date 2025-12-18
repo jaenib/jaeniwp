@@ -11,6 +11,7 @@ Form and layout
 - All UI boxes are sharp-edged (no rounded corners) across panels, cards, chips, buttons, and nav.
 - Sticky left rail with nav anchors; main content in stacked panels.
 - Subtle background grid and layered haze for a slight cyberpunk nudge without going full sci-fi.
+- Portfolio structure: short "Selected Works" panel + a single deep case study + tooling summary.
 
 Typography
 - Space Grotesk for headings, General Sans for body.
@@ -20,6 +21,7 @@ Content policy
 - Do not publish street address or phone number.
 - Use jan.ba.jb@gmail.com as the public contact email until changed.
 - Keep the PDF download sanitized and aligned with on-page content.
+- Portfolio media lives in `cv/assets` and should be optimized for web display.
 
 Future instructions
 - Do not add an accent switcher; the palette should be featured in the layout itself.

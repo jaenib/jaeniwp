@@ -22,9 +22,11 @@
       </div>
       <nav class="nav">
         <a href="#profile">Profile</a>
+        <a href="#portfolio">Selected Works</a>
+        <a href="#binz-wind">Binz Wind</a>
+        <a href="#tools">Tools</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Selected Work</a>
         <a href="#skills">Skills</a>
         <a href="#community">Community</a>
         <a href="#languages">Languages</a>
@@ -202,48 +204,138 @@
         </div>
       </section>
 
-      <section id="projects" class="panel">
+      <section id="portfolio" class="panel">
         <div class="panel-header">
           <div>
-            <p class="eyebrow">Selected Work</p>
-            <h2>Projects and prototypes</h2>
+            <p class="eyebrow">Selected Works</p>
+            <h2>Architecture + computation</h2>
           </div>
           <div class="chips">
-            <span class="chip">Generative AI</span>
-            <span class="chip">Public culture</span>
-            <span class="chip">Systems</span>
+            <span class="chip">Urban reuse</span>
+            <span class="chip">Data tools</span>
+            <span class="chip">Visual research</span>
           </div>
         </div>
-        <div class="project-grid">
+        <p class="lead">
+          A concise selection of ongoing architectural work and computational experiments.
+        </p>
+        <div class="portfolio-actions">
+          <a class="button" href="/cv/jan-bauer-selected-works.pdf" download>Download selected works</a>
+          <a class="button ghost" href="/cv/jan-bauer-recollection.pdf" download>Recollection folio</a>
+        </div>
+        <div class="portfolio-grid">
+          <article class="portfolio-card">
+            <div class="portfolio-top">
+              <h3>Binz Wind</h3>
+              <span class="chip tone">Urban reuse</span>
+            </div>
+            <p>Reframing the Binz business zone with permeability, reuse logistics, and a living facade.</p>
+            <a class="text-link" href="#binz-wind">View case study</a>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-top">
+              <h3>Recollection</h3>
+              <span class="chip tone">Visual archive</span>
+            </div>
+            <p>Image-driven reflections on urban memory, atmosphere, and spatial traces.</p>
+            <a class="text-link" href="/cv/jan-bauer-recollection.pdf" download>Download folio</a>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-top">
+              <h3>Portfolio Builder</h3>
+              <span class="chip tone">Tooling</span>
+            </div>
+            <p>Python tooling for curated image sequences and modular portfolio assembly.</p>
+            <a class="text-link" href="#tools">See tooling</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="binz-wind" class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Case Study</p>
+            <h2>Binz Wind</h2>
+          </div>
+          <p class="aside">Urban design study for Zurich's Binz: softening the B2Binz wall and reopening the seam.</p>
+        </div>
+        <div class="case-grid">
+          <div>
+            <p>
+              Binz sits between the Friesenberg garden-city and a rare IG III business zone shaped by the
+              former clay pit. The 130m-long B2Binz office wall intensifies the edge. Binz Wind proposes a
+              more porous interface that turns the facade into a lived, legible threshold.
+            </p>
+            <ul>
+              <li>Introduce two ground-floor passages to reconnect residential streets with the business ravine.</li>
+              <li>Move wet spaces to an external "active band" so the facade shows real life, not speculation.</li>
+              <li>Reuse the existing structure with minimal demolition: new risers mount on the facade.</li>
+              <li>Modular chamber system supports multiple cohabitation patterns without erasing openness.</li>
+            </ul>
+          </div>
+          <div class="case-meta">
+            <div>
+              <p class="eyebrow">Location</p>
+              <p>Binz, Zurich</p>
+            </div>
+            <div>
+              <p class="eyebrow">Focus</p>
+              <p>Urban permeability, reuse logistics, living facade strategy</p>
+            </div>
+            <div>
+              <p class="eyebrow">Outputs</p>
+              <p>Urban plan, collage series, facade strategy, data sketches</p>
+            </div>
+          </div>
+        </div>
+        <div class="case-gallery">
+          <figure>
+            <img src="/cv/assets/binz-wind-schwarzplan.jpg" alt="Schwarzplan extended map for Binz Wind study">
+          </figure>
+          <figure>
+            <img src="/cv/assets/binz-wind-situationsplan.jpg" alt="Situational plan showing permeability and passages">
+          </figure>
+          <figure>
+            <img src="/cv/assets/binz-wind-collage.jpg" alt="Collage exploring facade activation and public edge">
+          </figure>
+          <figure>
+            <img src="/cv/assets/binz-wind-fences.jpg" alt="Zaune des Grauens drawing from the Binz Wind study">
+          </figure>
+        </div>
+      </section>
+
+      <section id="tools" class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Tools</p>
+            <h2>Portfolio and data tooling</h2>
+          </div>
+          <p class="aside">Lightweight systems that support curation, storytelling, and analysis.</p>
+        </div>
+        <div class="skills-grid">
           <article>
-            <div class="project-head">
-              <h3>Dream Together</h3>
-              <span class="chip tone">Tbilisi 2022</span>
-            </div>
-            <p>Open-source image generation to amplify marginalized voices in a public exhibition.</p>
-            <div class="tags">
-              <span>Image AI</span><span>Web archive</span><span>Storytelling</span>
-            </div>
+            <h3>Portfolio Builder</h3>
+            <ul>
+              <li>Python + Jupyter workflow for assembling tailored portfolios.</li>
+              <li>Row-based collage logic for sequencing images with consistent rhythm.</li>
+              <li>Folder-based database that stays simple and flexible.</li>
+            </ul>
           </article>
           <article>
-            <div class="project-head">
-              <h3>2038</h3>
-              <span class="chip tone">Venice 2020</span>
-            </div>
-            <p>Speculative biographies and digital aging for the German Pavilion narrative film.</p>
-            <div class="tags">
-              <span>Future narratives</span><span>Exhibition</span><span>Media</span>
-            </div>
+            <h3>img2printpdf</h3>
+            <ul>
+              <li>Generates space-optimized PDFs from image sets.</li>
+              <li>Justified row packing with configurable margins and gaps.</li>
+              <li>Supports A4/Letter/custom sizes and DPI-accurate output.</li>
+            </ul>
           </article>
           <article>
-            <div class="project-head">
-              <h3>It's a Match</h3>
-              <span class="chip tone">Toronto 2023</span>
-            </div>
-            <p>Workshop and data-structure prototype for semantic similarity in cultural datasets.</p>
-            <div class="tags">
-              <span>Data tools</span><span>Workshops</span><span>Open source</span>
-            </div>
+            <h3>Binz Numbers Game</h3>
+            <ul>
+              <li>Notebook-based data sketches for B2Binz and zoning analysis.</li>
+              <li>CSV-driven exploration of building data.</li>
+              <li>Quick plots to test urban questions early.</li>
+            </ul>
           </article>
         </div>
       </section>
