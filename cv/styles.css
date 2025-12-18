@@ -7,9 +7,9 @@
   --accent: #d84a2b;
   --accent-dark: #2a0f31;
   --accent-muted: #6f6277;
-  --glass: rgba(255, 255, 255, 0.05);
-  --glass-strong: rgba(255, 255, 255, 0.08);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass: rgba(255, 255, 255, 0.02);
+  --glass-strong: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.06);
   --glass-overlay: rgba(255, 255, 255, 0);
   --glass-refraction: linear-gradient(
     120deg,
@@ -18,7 +18,7 @@
     rgba(255, 255, 255, 0.18) 70%,
     rgba(255, 255, 255, 0.03)
   );
-  --grid: rgba(255, 255, 255, 0.05);
+  --grid: rgba(255, 255, 255, 0.08);
   --hairline: 0.6px;
   --shadow: 0 20px 55px rgba(3, 2, 6, 0.5);
 }
@@ -103,9 +103,9 @@ img {
   padding: 24px;
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(26px) saturate(150%);
-  -webkit-backdrop-filter: blur(26px) saturate(150%);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(32px) saturate(120%);
+  -webkit-backdrop-filter: blur(32px) saturate(120%);
 }
 
 .side,
@@ -213,10 +213,10 @@ img {
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   padding: 22px 24px;
-  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
   margin-bottom: 20px;
-  backdrop-filter: blur(24px) saturate(150%);
-  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(30px) saturate(120%);
+  -webkit-backdrop-filter: blur(30px) saturate(120%);
 }
 
 .panel::before {
@@ -341,9 +341,9 @@ img {
   border-radius: 0;
   padding: 16px;
   background: var(--glass);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(22px) saturate(150%);
-  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(28px) saturate(120%);
+  -webkit-backdrop-filter: blur(28px) saturate(120%);
 }
 
 .portfolio-card:nth-child(2) {
@@ -395,9 +395,9 @@ img {
   border: var(--hairline) solid var(--glass-border);
   padding: 14px;
   background: var(--glass-strong);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(28px) saturate(120%);
+  -webkit-backdrop-filter: blur(28px) saturate(120%);
 }
 
 .case-meta p {
@@ -415,10 +415,10 @@ img {
   margin: 0;
   border: var(--hairline) solid var(--glass-border);
   padding: 6px;
-  background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(20px) saturate(145%);
-  -webkit-backdrop-filter: blur(20px) saturate(145%);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(24px) saturate(120%);
+  -webkit-backdrop-filter: blur(24px) saturate(120%);
 }
 
 .case-gallery img {
@@ -449,9 +449,9 @@ img {
   border: var(--hairline) solid var(--glass-border);
   padding: 16px;
   background: var(--glass);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(28px) saturate(120%);
+  -webkit-backdrop-filter: blur(28px) saturate(120%);
 }
 
 .works-card h3 {
@@ -474,9 +474,9 @@ img {
   border: var(--hairline) solid var(--glass-border);
   padding: 16px;
   background: var(--glass);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(28px) saturate(120%);
+  -webkit-backdrop-filter: blur(28px) saturate(120%);
 }
 
 .links-card h3 {
@@ -500,9 +500,9 @@ img {
   border-radius: 0;
   padding: 14px;
   background: var(--glass);
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(28px) saturate(120%);
+  -webkit-backdrop-filter: blur(28px) saturate(120%);
 }
 
 .skills-grid article:nth-child(2) {
@@ -526,9 +526,9 @@ img {
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   background: var(--glass);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(24px) saturate(150%);
-  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(30px) saturate(120%);
+  -webkit-backdrop-filter: blur(30px) saturate(120%);
 }
 
 .contact-actions {
