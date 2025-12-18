@@ -7,10 +7,17 @@
   --accent: #d84a2b;
   --accent-dark: #2a0f31;
   --accent-muted: #6f6277;
-  --glass: rgba(20, 18, 28, 0.28);
-  --glass-strong: rgba(18, 16, 24, 0.38);
+  --glass: rgba(20, 18, 28, 0.2);
+  --glass-strong: rgba(18, 16, 24, 0.3);
   --glass-border: rgba(255, 255, 255, 0.18);
   --glass-overlay: rgba(255, 255, 255, 0.04);
+  --glass-refraction: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.02) 45%,
+    rgba(255, 255, 255, 0.12) 70%,
+    rgba(255, 255, 255, 0.02)
+  );
   --grid: rgba(255, 255, 255, 0.04);
   --shadow: 0 22px 60px rgba(3, 2, 6, 0.55);
 }
@@ -96,8 +103,41 @@ img {
   border: 1px solid var(--glass-border);
   border-radius: 0;
   box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(18px) saturate(145%);
-  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  backdrop-filter: blur(22px) saturate(155%);
+  -webkit-backdrop-filter: blur(22px) saturate(155%);
+}
+
+.side,
+.panel,
+.portfolio-card,
+.case-meta,
+.case-gallery figure,
+.works-card,
+.links-card,
+.skills-grid article,
+.contact-panel {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.side::after,
+.panel::after,
+.portfolio-card::after,
+.case-meta::after,
+.case-gallery figure::after,
+.works-card::after,
+.links-card::after,
+.skills-grid article::after,
+.contact-panel::after {
+  content: "";
+  position: absolute;
+  inset: -20% -10%;
+  background: var(--glass-refraction);
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  filter: blur(22px);
+  transform: translate3d(-6px, -4px, 0) rotate(-1.2deg);
+  pointer-events: none;
 }
 
 .brand {
@@ -193,8 +233,8 @@ img {
   padding: 22px 24px;
   box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   margin-bottom: 20px;
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
 }
 
 .panel::before {
@@ -320,8 +360,8 @@ img {
   padding: 16px;
   background: var(--glass);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px) saturate(135%);
-  -webkit-backdrop-filter: blur(14px) saturate(135%);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
 
 .portfolio-card:nth-child(2) {
@@ -374,8 +414,8 @@ img {
   padding: 14px;
   background: var(--glass-strong);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px) saturate(135%);
-  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
 }
 
 .case-meta p {
@@ -393,10 +433,10 @@ img {
   margin: 0;
   border: 1px solid var(--glass-border);
   padding: 6px;
-  background: rgba(8, 7, 12, 0.5);
+  background: rgba(8, 7, 12, 0.4);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px) saturate(130%);
-  -webkit-backdrop-filter: blur(10px) saturate(130%);
+  backdrop-filter: blur(14px) saturate(145%);
+  -webkit-backdrop-filter: blur(14px) saturate(145%);
 }
 
 .case-gallery img {
@@ -428,8 +468,8 @@ img {
   padding: 16px;
   background: var(--glass);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px) saturate(135%);
-  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
 }
 
 .works-card h3 {
@@ -453,8 +493,8 @@ img {
   padding: 16px;
   background: var(--glass);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px) saturate(135%);
-  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
 }
 
 .links-card h3 {
@@ -479,8 +519,8 @@ img {
   padding: 14px;
   background: var(--glass);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px) saturate(135%);
-  -webkit-backdrop-filter: blur(12px) saturate(135%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
 }
 
 .skills-grid article:nth-child(2) {
@@ -505,8 +545,8 @@ img {
   border-radius: 0;
   background: var(--glass);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
 }
 
 .contact-actions {
