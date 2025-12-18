@@ -3,23 +3,24 @@
   --panel: #14111a;
   --text: #f2edf3;
   --muted: #b3a9b9;
-  --line: rgba(255, 255, 255, 0.08);
+  --line: rgba(255, 255, 255, 0.05);
   --accent: #d84a2b;
   --accent-dark: #2a0f31;
   --accent-muted: #6f6277;
-  --glass: rgba(20, 18, 28, 0.2);
-  --glass-strong: rgba(18, 16, 24, 0.3);
-  --glass-border: rgba(255, 255, 255, 0.18);
-  --glass-overlay: rgba(255, 255, 255, 0.04);
+  --glass: rgba(20, 18, 28, 0.12);
+  --glass-strong: rgba(18, 16, 24, 0.18);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-overlay: linear-gradient(140deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
   --glass-refraction: linear-gradient(
     120deg,
-    rgba(255, 255, 255, 0.18),
-    rgba(255, 255, 255, 0.02) 45%,
-    rgba(255, 255, 255, 0.12) 70%,
-    rgba(255, 255, 255, 0.02)
+    rgba(255, 255, 255, 0.28),
+    rgba(255, 255, 255, 0.04) 45%,
+    rgba(255, 255, 255, 0.18) 70%,
+    rgba(255, 255, 255, 0.03)
   );
-  --grid: rgba(255, 255, 255, 0.04);
-  --shadow: 0 22px 60px rgba(3, 2, 6, 0.55);
+  --grid: rgba(255, 255, 255, 0.05);
+  --hairline: 0.6px;
+  --shadow: 0 24px 70px rgba(3, 2, 6, 0.6);
 }
 
 html {
@@ -98,13 +99,13 @@ img {
   position: sticky;
   top: 24px;
   align-self: start;
-  background: var(--glass);
+  background: var(--glass-overlay), var(--glass);
   padding: 24px;
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
-  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(22px) saturate(155%);
-  -webkit-backdrop-filter: blur(22px) saturate(155%);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.45), inset 0 0.5px 0 rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(28px) saturate(165%);
+  -webkit-backdrop-filter: blur(28px) saturate(165%);
 }
 
 .side,
@@ -133,9 +134,9 @@ img {
   position: absolute;
   inset: -20% -10%;
   background: var(--glass-refraction);
-  opacity: 0.35;
+  opacity: 0.5;
   mix-blend-mode: screen;
-  filter: blur(22px);
+  filter: blur(28px);
   transform: translate3d(-6px, -4px, 0) rotate(-1.2deg);
   pointer-events: none;
 }
@@ -227,14 +228,14 @@ img {
 
 .panel {
   position: relative;
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
+  background: var(--glass-overlay), var(--glass);
+  border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   padding: 22px 24px;
-  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45), inset 0 0.5px 0 rgba(255, 255, 255, 0.18);
   margin-bottom: 20px;
-  backdrop-filter: blur(20px) saturate(150%);
-  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(26px) saturate(165%);
+  -webkit-backdrop-filter: blur(26px) saturate(165%);
 }
 
 .panel::before {
@@ -355,13 +356,13 @@ img {
 }
 
 .portfolio-card {
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   padding: 16px;
-  background: var(--glass);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  background: var(--glass-overlay), var(--glass);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(24px) saturate(165%);
+  -webkit-backdrop-filter: blur(24px) saturate(165%);
 }
 
 .portfolio-card:nth-child(2) {
@@ -410,12 +411,12 @@ img {
 }
 
 .case-meta {
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   padding: 14px;
-  background: var(--glass-strong);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  background: var(--glass-overlay), var(--glass-strong);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
 }
 
 .case-meta p {
@@ -431,12 +432,12 @@ img {
 
 .case-gallery figure {
   margin: 0;
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   padding: 6px;
-  background: rgba(8, 7, 12, 0.4);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px) saturate(145%);
-  -webkit-backdrop-filter: blur(14px) saturate(145%);
+  background: var(--glass-overlay), rgba(8, 7, 12, 0.28);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
 }
 
 .case-gallery img {
@@ -464,12 +465,12 @@ img {
 }
 
 .works-card {
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   padding: 16px;
-  background: var(--glass);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  background: var(--glass-overlay), var(--glass);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
 }
 
 .works-card h3 {
@@ -489,12 +490,12 @@ img {
 }
 
 .links-card {
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   padding: 16px;
-  background: var(--glass);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  background: var(--glass-overlay), var(--glass);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
 }
 
 .links-card h3 {
@@ -514,13 +515,13 @@ img {
 }
 
 .skills-grid article {
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   padding: 14px;
-  background: var(--glass);
-  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  background: var(--glass-overlay), var(--glass);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(22px) saturate(165%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%);
 }
 
 .skills-grid article:nth-child(2) {
@@ -541,12 +542,12 @@ img {
   justify-content: space-between;
   gap: 12px;
   align-items: center;
-  border: 1px solid var(--glass-border);
+  border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
-  background: var(--glass);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  background: var(--glass-overlay), var(--glass);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(26px) saturate(170%);
+  -webkit-backdrop-filter: blur(26px) saturate(170%);
 }
 
 .contact-actions {
