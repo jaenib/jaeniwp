@@ -12,6 +12,7 @@ Form and layout
 - Sticky left rail with nav anchors; main content in stacked panels.
 - Subtle background grid and layered haze for a slight cyberpunk nudge without going full sci-fi.
 - Portfolio structure: short "Selected Works" panel + a single deep case study + tooling summary.
+- Current hierarchy: Portfolio overview (downloads) + three deep case studies (Familiar Stranger, Binz/B2Morrow, Sensing Abundance) + compact index of remaining works.
 
 Typography
 - Space Grotesk for headings, General Sans for body.
