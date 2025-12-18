@@ -10,7 +10,7 @@
   --glass: rgba(20, 18, 28, 0.12);
   --glass-strong: rgba(18, 16, 24, 0.18);
   --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-overlay: linear-gradient(140deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  --glass-overlay: rgba(255, 255, 255, 0);
   --glass-refraction: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0.28),
@@ -99,7 +99,7 @@ img {
   position: sticky;
   top: 24px;
   align-self: start;
-  background: var(--glass-overlay), var(--glass);
+  background: var(--glass);
   padding: 24px;
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
@@ -121,25 +121,6 @@ img {
   isolation: isolate;
 }
 
-.side::after,
-.panel::after,
-.portfolio-card::after,
-.case-meta::after,
-.case-gallery figure::after,
-.works-card::after,
-.links-card::after,
-.skills-grid article::after,
-.contact-panel::after {
-  content: "";
-  position: absolute;
-  inset: -20% -10%;
-  background: var(--glass-refraction);
-  opacity: 0.5;
-  mix-blend-mode: screen;
-  filter: blur(28px);
-  transform: translate3d(-6px, -4px, 0) rotate(-1.2deg);
-  pointer-events: none;
-}
 
 .brand {
   display: grid;
@@ -228,7 +209,7 @@ img {
 
 .panel {
   position: relative;
-  background: var(--glass-overlay), var(--glass);
+  background: var(--glass);
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   padding: 22px 24px;
@@ -359,7 +340,7 @@ img {
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   padding: 16px;
-  background: var(--glass-overlay), var(--glass);
+  background: var(--glass);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(24px) saturate(165%);
   -webkit-backdrop-filter: blur(24px) saturate(165%);
@@ -413,7 +394,7 @@ img {
 .case-meta {
   border: var(--hairline) solid var(--glass-border);
   padding: 14px;
-  background: var(--glass-overlay), var(--glass-strong);
+  background: var(--glass-strong);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(22px) saturate(165%);
   -webkit-backdrop-filter: blur(22px) saturate(165%);
@@ -434,7 +415,7 @@ img {
   margin: 0;
   border: var(--hairline) solid var(--glass-border);
   padding: 6px;
-  background: var(--glass-overlay), rgba(8, 7, 12, 0.28);
+  background: rgba(8, 7, 12, 0.28);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
@@ -467,7 +448,7 @@ img {
 .works-card {
   border: var(--hairline) solid var(--glass-border);
   padding: 16px;
-  background: var(--glass-overlay), var(--glass);
+  background: var(--glass);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(22px) saturate(165%);
   -webkit-backdrop-filter: blur(22px) saturate(165%);
@@ -492,7 +473,7 @@ img {
 .links-card {
   border: var(--hairline) solid var(--glass-border);
   padding: 16px;
-  background: var(--glass-overlay), var(--glass);
+  background: var(--glass);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(22px) saturate(165%);
   -webkit-backdrop-filter: blur(22px) saturate(165%);
@@ -518,7 +499,7 @@ img {
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
   padding: 14px;
-  background: var(--glass-overlay), var(--glass);
+  background: var(--glass);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.3), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(22px) saturate(165%);
   -webkit-backdrop-filter: blur(22px) saturate(165%);
@@ -544,7 +525,7 @@ img {
   align-items: center;
   border: var(--hairline) solid var(--glass-border);
   border-radius: 0;
-  background: var(--glass-overlay), var(--glass);
+  background: var(--glass);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), inset 0 0.5px 0 rgba(255, 255, 255, 0.16);
   backdrop-filter: blur(26px) saturate(170%);
   -webkit-backdrop-filter: blur(26px) saturate(170%);
