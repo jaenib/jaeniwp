@@ -11,6 +11,7 @@ Form and layout
 - All UI boxes are sharp-edged (no rounded corners) across panels, cards, chips, buttons, and nav.
 - Sticky left rail with nav anchors; main content in stacked panels.
 - Subtle background grid and layered haze for a slight cyberpunk nudge without going full sci-fi.
+- Panels and cards behave like thin glass sheets: translucent fills, faint borders, soft drop shadows, and blur.
 - Portfolio structure: short "Selected Works" panel + a single deep case study + tooling summary.
 - Current hierarchy: Portfolio overview (downloads) + three deep case studies (Familiar Stranger, Binz/B2Morrow, Sensing Abundance) + compact index of remaining works.
 - New subpages: Dream Together and Invisibility live under `cv/projects/` with the same visual system.
