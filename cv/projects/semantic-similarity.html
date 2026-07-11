@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic Similarity — Jan Bauer</title>
+<meta name="description" content="Semantic Similarity — nonlinear group research and documentation using GloVe word embeddings. Focus Work ETH ITA, 2022–24.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23111'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/cv/styles.css">
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <a class="brand" href="/cv/">JAN BAUER</a>
+    <nav>
+      <a href="/cv/#projects">Selected Projects</a>
+      <a href="/cv/lebenslauf.html">Lebenslauf</a>
+      <a href="/cv/jan-bauer-portfolio.pdf">PDF</a>
+      <a href="mailto:jan.ba.jb@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <h1 class="title">Semantic Similarity<br>Nonlinear Group Research<br>and Documentation</h1>
+  <div class="meta">
+    <p>2022&ndash;24<br>Focus Work ETH ITA</p>
+    <p>with Leo Graf</p>
+  </div>
+
+  <div class="prose">
+    <p>The task was to produce a reader to end the research phase. 3 Groups of 2 Students were
+    esearching one artist but 3 different sites. The difficulty of structuring what should be a free
+    and creative research into a linear document felt limiting. Hierarchies when decidiing the
+    narrative felt inevitable.</p>
+    <p>We decided to conceive a tool that would allow us to collect all fragments of the research
+    and could be dynamically restructured according to interest.</p>
+  </div>
+
+  <div class="figrow tight">
+    <figure>
+      <img src="/cv/assets/portfolio/semantic-33-1.jpg" alt="Force-directed graph of all research fragments connected by semantic similarity" loading="lazy">
+      <figcaption>The body of research as a semantic graph</figcaption>
+    </figure>
+  </div>
+
+  <div class="figrow split-64">
+    <figure>
+      <img src="/cv/assets/portfolio/semantic-34-1.jpg" alt="Cosine similarity matrix of all fragment pairs" loading="lazy">
+      <figcaption>Similarity matrix</figcaption>
+    </figure>
+    <div class="stack">
+      <figure><img src="/cv/assets/portfolio/semantic-34-2.jpg" alt="GloVe vector space around the word participation" loading="lazy"></figure>
+      <figure><img src="/cv/assets/portfolio/semantic-34-3.jpg" alt="Classic man-woman king-queen embedding diagram" loading="lazy"></figure>
+      <div class="sidenote">
+        <p>The code uses the GloVe Tensors, a pretrained linguistic vectorspace, where semantic
+        meaning is embedded spatially.</p>
+        <p>The researcher defines five words that capture the importance of the piece they add to
+        the database. The five words per fragment are added and a single vector epresenting a
+        location in space for each fragmentis found.</p>
+      </div>
+      <figure><img src="/cv/assets/portfolio/semantic-34-5.jpg" alt="Five words summed into one vector: chaos, fragmentation, continuity, presence, value" loading="lazy"></figure>
+      <div class="sidenote">
+        <p>A cosine similarity operation finds their distance from eachother. It is performed between
+        each possible pair in the database, and stored in the similarity matrix.</p>
+        <p>Now the body of research can be searched in many ways. For example by asking for the close
+        friends of a single fragment, it will display which other fragments have the smallest
+        distance.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="figrow">
+    <figure>
+      <img src="/cv/assets/portfolio/semantic-35-1.jpg" alt="Spreads of one printed possibility of the reader with colour-coded edges" loading="lazy">
+      <figcaption>Printed: One Possibility</figcaption>
+    </figure>
+  </div>
+
+  <footer class="folio">
+    <span class="label">Semantic Similarity &mdash; Focus Work ETH ITA &middot; pp. 33&ndash;35</span>
+    <span class="pager"><a href="/cv/projects/storey-vss.html">&larr; Storey.VSS</a><a href="/cv/">Index</a><a href="/cv/projects/sensing-seebach.html">Sensing Seebach &rarr;</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

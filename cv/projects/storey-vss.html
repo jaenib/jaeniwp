@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storey.VSS — Floorplan GAN — Jan Bauer</title>
+<meta name="description" content="Storey.VSS — Visual Structural Synthesizer, an architecture floorplan generator. Focus Work at ETH ITA, Chair of Benjamin Dillenburger, 2022–24.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23111'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/cv/styles.css">
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <a class="brand" href="/cv/">JAN BAUER</a>
+    <nav>
+      <a href="/cv/#projects">Selected Projects</a>
+      <a href="/cv/lebenslauf.html">Lebenslauf</a>
+      <a href="/cv/jan-bauer-portfolio.pdf">PDF</a>
+      <a href="mailto:jan.ba.jb@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <h1 class="title">Storey.VSS<br>Floorplan GAN<br>Structural Synth</h1>
+  <div class="meta">
+    <p>2022&ndash;24<br>Focus Work ETH ITA<br>Chair of Benjamin Dillenburger<br>Advisor Anton Savov</p>
+    <p>with Leo Graf &middot; <a href="https://www.instagram.com/storey.vss/">@storey.vss</a></p>
+  </div>
+
+  <div class="figrow split-46">
+    <div class="sidenote">
+      <p>Visual Structural Synthesizer is an architecture floorplan generator.</p>
+      <p>We built it to take an active position as architects in light of machine learning
+      advancements. We invite ML to join the artistic design process specific to Architecture and
+      find a form for an integration that combines them fruitfully, rather than destructively.</p>
+    </div>
+    <figure>
+      <img src="/cv/assets/portfolio/storey-30-1.jpg" alt="Grid of historic snowflake photographs by W.A. Bentley" loading="lazy">
+      <figcaption>Snowflake photography W.A. Bentley</figcaption>
+    </figure>
+  </div>
+
+  <div class="prose">
+    <p>We used the &ldquo;swiss dwellings database&rdquo;, which contains detailed data on 42,207
+    apartments (242,257 rooms) in 3,093 buildings including their geometries, room typology as well
+    as their visual, acoustical, topological and daylight characteristics.</p>
+    <p>We started with a simple representation: windows, doors and walls. We trained a cGAN to
+    predict floorplans based on a figure ground &mdash; promising results. To improve we added more
+    information by coloring areas according room type.</p>
+  </div>
+  <div class="figrow tight">
+    <figure>
+      <img src="/cv/assets/portfolio/storey-31-1.jpg" alt="Generator performance: input figure grounds, ground truth floorplans and predicted floorplans" loading="lazy">
+      <figcaption>Generator Performance</figcaption>
+    </figure>
+  </div>
+
+  <div class="prose">
+    <p>We trained on snowflakes, because their appearence is also governed by a spatial
+    organisational principle. They exhibit a wide spectrum of structures and expressions, derived
+    solely from a specific combination of two types of crystallization: plates and columns.
+    Predictive performance was less than with the floorplans.</p>
+    <p>We went ahead with our plan to train from a hybrid set containing both snowlakes and
+    floorplans, to see if we could spot any instances where their organisation principles would
+    combine. A selection of results that could be argued to exhibit such behaviour.</p>
+  </div>
+  <div class="figrow tight">
+    <figure>
+      <img src="/cv/assets/portfolio/storey-32-1.jpg" alt="Snowflake ground truths, predictions and hybrid snowflake-floorplan results" loading="lazy">
+      <figcaption>Hybrid training results</figcaption>
+    </figure>
+  </div>
+
+  <footer class="folio">
+    <span class="label">Storey.VSS &mdash; Focus Work ETH ITA &middot; pp. 30&ndash;32</span>
+    <span class="pager"><a href="/cv/projects/invisibility.html">&larr; Invisibility en Vague</a><a href="/cv/">Index</a><a href="/cv/projects/semantic-similarity.html">Semantic Similarity &rarr;</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
