@@ -24,13 +24,17 @@ Structure
   binz, kanzlei, invisibility, storey-vss, semantic-similarity,
   sensing-seebach, dream-together, bkf-dietikon, k118.
 - Footers show the printed page range (pp. x–y) as a nod to the book.
-- cv/jan-bauer-portfolio.pdf: 100dpi Ghostscript build of the book WITHOUT
-  page 1 (the CV page carries street address and phone — never publish those).
+- The portfolio PDF is NOT hosted publicly (removed July 2026). All "PDF"
+  links are mailto: requests to jan.ba.jb@gmail.com instead.
+- Desktop figure rows follow the book: equal-height rows via
+  .figrow.ar with per-row --c column widths proportional to image
+  aspect ratios (see styles.css). Mobile stays single-column stacked.
 
 Content policy (unchanged)
 - Do not publish street address or phone number anywhere, including PDFs.
 - Public contact is jan.ba.jb@gmail.com until changed.
-- Keep the PDF download sanitized and aligned with on-page content.
+- Do not re-add a public PDF download; the full portfolio goes out by email
+  on request only.
 - Videos stay short, muted-by-default mp4s in cv/assets/video/.
 
 Regeneration

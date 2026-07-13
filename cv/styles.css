@@ -173,6 +173,10 @@ figcaption {
 .split-46 { grid-template-columns: 2fr 3fr; }
 .split-73 { grid-template-columns: 7fr 3fr; }
 
+/* Equal-height rows like the book: column widths follow the images'
+   aspect ratios, set per row via --c (e.g. style="--c:1.47fr .724fr"). */
+.figrow.ar { grid-template-columns: var(--c, 1fr); }
+
 .stack { display: grid; gap: var(--gap); align-content: start; }
 
 /* text beside figures */
@@ -189,9 +193,9 @@ figcaption {
 .sidenote .lead-in { font-weight: 700; }
 
 ol.rules {
-  font-style: italic;
   font-size: 0.92rem;
   line-height: 1.5;
+  text-align: left;
   padding-left: 1.2em;
   margin: 0 0 1em;
 }
@@ -286,12 +290,14 @@ ol.rules li { margin-bottom: 0.55em; }
 
 @media (max-width: 900px) {
   .split-64, .split-46, .split-73 { grid-template-columns: 1fr; }
+  .figrow.ar.wide { grid-template-columns: 1fr; }
   .cv-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 680px) {
-  .cols-2, .cols-3 { grid-template-columns: 1fr; }
+  .cols-2, .cols-3, .figrow.ar { grid-template-columns: 1fr; }
   .cols-4 { grid-template-columns: repeat(2, 1fr); }
+  .figrow { row-gap: 26px; }
   .prose, .sidenote { text-align: left; }
   .toc a { grid-template-columns: 1fr auto; }
   .toc .pg { display: none; }
