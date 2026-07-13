@@ -156,6 +156,7 @@ figcaption {
   color: var(--ink-soft);
   margin-top: 0.55rem;
 }
+figcaption a { text-decoration: underline; text-underline-offset: 2px; }
 
 .figrow {
   display: grid;

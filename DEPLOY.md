@@ -6,7 +6,9 @@ This repo deploys to the server at `82.165.45.100` via a bare git repo with a po
 
 - Bare repo: `/srv/jaenib.git`
 - Work tree served by Nginx: `/var/www/jaenib`
-- Nginx site config: `/etc/nginx/sites-available/jaenib.conf` (symlinked into sites-enabled)
+- Nginx site config: `/etc/nginx/sites-available/jaenib.conf` (symlinked into
+  sites-enabled — restored to a real symlink July 2026; edit sites-available,
+  then `nginx -t && systemctl reload nginx`)
 - Web root falls back to `cv/index.html`, so hitting `/` or `/cv` serves the CV.
 
 ## Deploying changes
@@ -19,6 +21,34 @@ git push production main
 ```
 
 The post-receive hook checks out the latest `main` into `/var/www/jaenib`.
+
+Note: the hook runs `git checkout -f`, which does NOT delete files that were
+removed from the repo — stale files must be removed from `/var/www/jaenib`
+by hand (this bit us with the old portfolio PDF).
+
+## Large videos (not in git)
+
+The full films are too large for the repo. They are gitignored and uploaded
+directly to the web root (the hook never touches untracked files):
+
+```bash
+scp public-sentiment.mp4 sensing-abundance.mp4 dream-together.mp4 \
+  root@82.165.45.100:/var/www/jaenib/cv/assets/video/
+```
+
+Web copies are H.264 crf 25 / max 1920px / aac 128k / +faststart, built with
+ffmpeg from the masters on the external SSD (`/Volumes/1TB_SSD_A/Architektur/…`).
+
+## View counter
+
+`cv/views.js` shows and increments per-film view counts:
+
+- Service: `/srv/viewcount/viewcount.py` (Python stdlib, port 8787),
+  systemd unit `viewcount.service`, storage `/srv/viewcount/views.json`.
+- Nginx proxies `/api/views/` to it (in `jaenib.conf`).
+- API: `GET /api/views/<id>` → `{"views": n}`; `POST /api/views/<id>/hit`
+  increments. Ids: `[a-z0-9-]`, currently `public-sentiment`,
+  `sensing-abundance`, `dream-together`.
 
 ## Accessing the server
 

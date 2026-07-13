@@ -35,7 +35,10 @@ Content policy (unchanged)
 - Public contact is jan.ba.jb@gmail.com until changed.
 - Do not re-add a public PDF download; the full portfolio goes out by email
   on request only.
-- Videos stay short, muted-by-default mp4s in cv/assets/video/.
+- Small clips are muted mp4s in cv/assets/video/ (in git). The three full
+  films (public-sentiment, sensing-abundance, dream-together) have sound,
+  controls, and a view counter (cv/views.js + /api/views/); they are NOT
+  in git — uploaded straight to the server, see DEPLOY.md.
 
 Regeneration
 - Figure extraction scripts lived in the session scratchpad; approach:

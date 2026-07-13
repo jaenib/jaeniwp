@@ -1,2 +1,8 @@
 .DS_Store
 lib/
+
+# Full films are served from the server directly (uploaded via scp,
+# see DEPLOY.md) — too large for the repo. Masters live on the SSD.
+cv/assets/video/public-sentiment.mp4
+cv/assets/video/sensing-abundance.mp4
+cv/assets/video/dream-together.mp4
