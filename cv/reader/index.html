@@ -20,12 +20,17 @@
     #book { width: 100vw; height: 100vh; }
 
     /* small chrome: back to the site + a hint */
-    .reader-home {
-      position: fixed; top: 16px; left: 18px; z-index: 60;
-      font-size: 0.82rem; letter-spacing: 0.02em;
-      color: rgba(244, 242, 238, 0.72); text-decoration: none;
+    .reader-home, .reader-dl {
+      position: fixed; top: 14px; z-index: 60;
+      font-size: 0.8rem; letter-spacing: 0.02em; text-decoration: none;
+      color: rgba(244, 242, 238, 0.9);
+      background: rgba(17, 17, 17, 0.5);
+      padding: 5px 10px; border-radius: 4px;
+      -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px);
     }
-    .reader-home:hover { color: #fff; }
+    .reader-home { left: 16px; }
+    .reader-dl { right: 16px; }
+    .reader-home:hover, .reader-dl:hover { color: #fff; background: rgba(17, 17, 17, 0.75); }
     .reader-hint {
       position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
       z-index: 60; font-size: 0.72rem; color: rgba(244, 242, 238, 0.4);
@@ -44,6 +49,7 @@
 
 <body>
   <a class="reader-home" href="/cv/">&larr; Jan Bauer</a>
+  <a class="reader-dl" href="/cv/assets/Jan_Bauer_Portfolio.pdf" download>Download print version &darr;</a>
   <div id="book"></div>
   <div class="reader-hint">drag a corner or use &larr; &rarr; to turn the page</div>
 
