@@ -150,6 +150,19 @@ figure img, figure video {
   height: auto;
   display: block;
 }
+
+/* Lone full-width figures must never grow taller than the screen. On a wide
+   MacBook a near-square or portrait image at width:100% renders ~1200px tall —
+   bigger than the viewport — so you scroll through one giant image at a time.
+   Cap the height and let the image shrink + center, mimicking a print page.
+   Multi-column and equal-height (.ar) rows already limit height by dividing
+   the width, so they keep width:100% and tile their tracks untouched. */
+.figrow:not(.cols-2):not(.cols-3):not(.cols-4):not(.split-64):not(.split-46):not(.split-73):not(.ar) > figure > img {
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  margin-inline: auto;
+}
 figcaption {
   font-style: italic;
   font-size: 0.8rem;

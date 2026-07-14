@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Jan Bauer — Selected Projects (Reader)</title>
+  <meta name="description" content="Flip through the architecture portfolio of Jan Bauer, Architekt MSc ETH Zürich." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23111'/%3E%3C/svg%3E">
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: #111111;
+      overflow: hidden;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #f4f2ee;
+    }
+
+    #book { width: 100vw; height: 100vh; }
+
+    /* small chrome: back to the site + a hint */
+    .reader-home {
+      position: fixed; top: 16px; left: 18px; z-index: 60;
+      font-size: 0.82rem; letter-spacing: 0.02em;
+      color: rgba(244, 242, 238, 0.72); text-decoration: none;
+    }
+    .reader-home:hover { color: #fff; }
+    .reader-hint {
+      position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+      z-index: 60; font-size: 0.72rem; color: rgba(244, 242, 238, 0.4);
+      pointer-events: none; user-select: none;
+    }
+
+    /* StPageFlip engine styles */
+    .stf__parent { position: relative; display: block; box-sizing: border-box; touch-action: pan-y; }
+    .sft__wrapper { position: relative; width: 100%; box-sizing: border-box; }
+    .stf__parent canvas { position: absolute; width: 100%; height: 100%; left: 0; top: 0; }
+    .stf__block { position: absolute; width: 100%; height: 100%; box-sizing: border-box; perspective: 2000px; }
+    .stf__item { display: none; position: absolute; transform-style: preserve-3d; }
+    .stf__outerShadow, .stf__innerShadow, .stf__hardShadow, .stf__hardInnerShadow { position: absolute; left: 0; top: 0; }
+  </style>
+</head>
+
+<body>
+  <a class="reader-home" href="/cv/">&larr; Jan Bauer</a>
+  <div id="book"></div>
+  <div class="reader-hint">drag a corner or use &larr; &rarr; to turn the page</div>
+
+  <script src="page-flip.browser.js"></script>
+  <script src="flip-reader.js"></script>
+  <script>
+    // Landscape portfolio: one sheet per view, flipping a page at a time.
+    PageFlipReader.start({
+      books: ['portfolio'],
+      basePath: 'books',
+      single: true,            // one landscape page per view (no two-up spread)
+      pageAspect: 1233 / 884,  // the print portfolio's landscape page ratio
+      sideBuffer: 0.06,        // empty room L/R — room for the flip to sweep
+      topBuffer: 0.06,         // empty room T/B
+      pageBorder: { color: '#000', width: 0.4 }
+    });
+  </script>
+</body>
+
+</html>
