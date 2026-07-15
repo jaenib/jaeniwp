@@ -191,6 +191,14 @@ figcaption a { text-decoration: underline; text-underline-offset: 2px; }
    aspect ratios, set per row via --c (e.g. style="--c:1.47fr .724fr"). */
 .figrow.ar { grid-template-columns: var(--c, 1fr); }
 
+/* Seamless photo-walls: compositions the print book prints edge-to-edge as one
+   continuous grid (e.g. Vis-a-vis). Drop the gutters so they don't read as
+   white borders on the page. Desktop/tablet only — mobile keeps its stacking. */
+@media (min-width: 681px) {
+  .figrow.seamless { gap: 0; }
+  .figrow.seamless + .figrow.seamless { margin-top: 0; }
+}
+
 .stack { display: grid; gap: var(--gap); align-content: start; }
 
 /* text beside figures */
