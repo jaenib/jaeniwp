@@ -234,6 +234,8 @@ ol.rules li { margin-bottom: 0.55em; }
 }
 .band .figrow { margin: 0 0 var(--gap); }
 .band .figrow:last-child { margin-bottom: 0; }
+/* keep intro text off the images that follow it (at least a line or two) */
+.band .sidenote + .figrow { margin-top: clamp(1.4rem, 3vw, 2.4rem); }
 .band figcaption { color: var(--band-ink-soft); }
 .band .prose, .band .sidenote { color: var(--band-ink); }
 .band h3.kicker { margin-top: 0; }
